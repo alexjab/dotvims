@@ -1,0 +1,32 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom changes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remove extra margin to the left
+set foldcolumn=0
+
+" Enable mouse scrolling
+set mouse=a
+
+" Show the line numbers
+set number
+
+" Height of the command bar
+set cmdheight=1
+
+" Colors
+colorscheme dracula
+
+" Tabs/spaces
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Unset status line (will be set by vim-airline)
+set statusline=
+
+" Open split on the right and bottom
+set splitright
+set splitbelow
+
+" Highlight current line
+set cursorline
