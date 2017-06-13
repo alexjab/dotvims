@@ -56,6 +56,7 @@ echo '' >> ~/.vimrc
 cat .vimrc.custom >> ~/.vimrc
 
 echo 'let g:airline_powerline_fonts = 1' >> ~/.vimrc
+echo 'let g:airline#extensions#tabline#enabled = 1' >> ~/.vimrc
 
 
 echo '-> Done.'

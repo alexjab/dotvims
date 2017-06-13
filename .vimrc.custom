@@ -30,3 +30,6 @@ set splitbelow
 
 " Highlight current line
 set cursorline
+
+" Ingore case when autocompleting a path
+set wildignorecase
