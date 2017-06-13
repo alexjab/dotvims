@@ -2,8 +2,12 @@ echo 'Installing...'
 
 
 # Archive current vim configs
-mv ~/.vimrc ~/.vimrc.`date +%Y%m%d_%s`
-mv ~/.vim ~/.vim.`date +%Y%m%d_%s`
+if [ -f ~/.vimrc ]; then
+  mv ~/.vimrc ~/.vimrc.`date +%Y%m%d_%s`
+fi
+if [ -d ~/.vim ]; then
+  mv ~/.vim ~/.vim.`date +%Y%m%d_%s`
+fi
 
 
 # Create basic files and folders
