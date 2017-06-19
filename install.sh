@@ -46,6 +46,15 @@ cp -r \
   ~/.vim/bundle/vim-fugitive/
 
 
+# Install ctrlp
+mkdir ~/.vim/bundle/ctrlp.vim
+cp -r \
+  ./ctrlp.vim/plugin \
+  ./ctrlp.vim/autoload \
+  ./ctrlp.vim/doc \
+  ~/.vim/bundle/ctrlp.vim/
+
+
 # Create .vimrc file
 echo 'execute pathogen#infect()' > ~/.vimrc
 echo '' >> ~/.vimrc
@@ -54,10 +63,6 @@ cat ./vimrc/vimrcs/basic.vim >> ~/.vimrc
 echo '' >> ~/.vimrc
 
 cat .vimrc.custom >> ~/.vimrc
-
-echo 'let g:airline_powerline_fonts = 1' >> ~/.vimrc
-echo 'let g:airline#extensions#tabline#enabled = 1' >> ~/.vimrc
-
 
 echo '-> Done.'
 
