@@ -62,7 +62,7 @@ echo '' >> ~/.vimrc
 cat ./vimrc/vimrcs/basic.vim >> ~/.vimrc
 echo '' >> ~/.vimrc
 
-cat .vimrc.custom >> ~/.vimrc
+cat vimrc.custom >> ~/.vimrc
 
 echo '-> Done.'
 
