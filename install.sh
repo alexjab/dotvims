@@ -21,42 +21,56 @@ touch $VIMRC_PATH
 
 # Install pathogen
 mkdir $VIM_PATH/autoload $BUNDLE_PATH
-cp ./vim-pathogen/autoload/pathogen.vim $VIM_PATH/autoload/
+cp ./plugins/vim-pathogen/autoload/pathogen.vim $VIM_PATH/autoload/
 
 
 # Install dracula-vim
 mkdir $BUNDLE_PATH/dracula-vim
 cp -r \
-  ./dracula-vim/autoload \
-  ./dracula-vim/colors \
+  ./plugins/dracula-vim/autoload \
+  ./plugins/dracula-vim/colors \
   $BUNDLE_PATH/dracula-vim/
 
 
 # Install vim-airline
 mkdir $BUNDLE_PATH/vim-airline
 cp -r \
-  ./vim-airline/autoload \
-  ./vim-airline/doc \
-  ./vim-airline/plugin \
-  ./vim-airline/t \
+  ./plugins/vim-airline/autoload \
+  ./plugins/vim-airline/doc \
+  ./plugins/vim-airline/plugin \
+  ./plugins/vim-airline/t \
   $BUNDLE_PATH/vim-airline/
 
 
 # Install vim-fugitive
 mkdir $BUNDLE_PATH/vim-fugitive
 cp -r \
-  ./vim-fugitive/doc \
-  ./vim-fugitive/plugin \
+  ./plugins/vim-fugitive/doc \
+  ./plugins/vim-fugitive/plugin \
   $BUNDLE_PATH/vim-fugitive/
 
 
 # Install ctrlp
 mkdir $BUNDLE_PATH/ctrlp.vim
 cp -r \
-  ./ctrlp.vim/plugin \
-  ./ctrlp.vim/autoload \
-  ./ctrlp.vim/doc \
+  ./plugins/ctrlp.vim/plugin \
+  ./plugins/ctrlp.vim/autoload \
+  ./plugins/ctrlp.vim/doc \
   $BUNDLE_PATH/ctrlp.vim/
+
+
+# Install vim-snipmate
+cp -r \
+  ./plugins/tlib_vim \
+  $BUNDLE_PATH/
+cp -r \
+  ./plugins/vim-addon-mw-utils \
+  $BUNDLE_PATH/
+cp -r \
+  ./plugins/vim-snipmate \
+  $BUNDLE_PATH/
+cp -r ./snippets \
+  $BUNDLE_PATH/vim-snipmate/
 
 
 # Create .vimrc file
