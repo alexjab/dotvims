@@ -31,3 +31,6 @@
 [submodule "vim-snipmate"]
 	path = plugins/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "plugins/vim-polyglot"]
+	path = plugins/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot

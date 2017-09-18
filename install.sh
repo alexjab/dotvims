@@ -73,6 +73,11 @@ cp -r ./snippets \
   $BUNDLE_PATH/vim-snipmate/
 
 
+# Install vim-polyglot
+mkdir $BUNDLE_PATH/vim-polyglot
+cd ./plugins/vim-polyglot && git archive master | tar -x -C $BUNDLE_PATH/vim-polyglot
+cd ../../
+
 # Create .vimrc file
 # Pathogen
 echo -n '-> Adding pathogen to ~/.vimrc ... '
