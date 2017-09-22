@@ -26,51 +26,31 @@ cp ./plugins/vim-pathogen/autoload/pathogen.vim $VIM_PATH/autoload/
 
 # Install dracula-vim
 mkdir $BUNDLE_PATH/dracula-vim
-cp -r \
-  ./plugins/dracula-vim/autoload \
-  ./plugins/dracula-vim/colors \
-  $BUNDLE_PATH/dracula-vim/
+cd ./plugins/dracula-vim && git archive master | tar -x -C $BUNDLE_PATH/dracula-vim
+cd ../../
 
 
 # Install vim-airline
 mkdir $BUNDLE_PATH/vim-airline
-cp -r \
-  ./plugins/vim-airline/autoload \
-  ./plugins/vim-airline/doc \
-  ./plugins/vim-airline/plugin \
-  ./plugins/vim-airline/t \
-  $BUNDLE_PATH/vim-airline/
+cd ./plugins/vim-airline && git archive master | tar -x -C $BUNDLE_PATH/vim-airline
+cd ../../
 
 
 # Install vim-fugitive
 mkdir $BUNDLE_PATH/vim-fugitive
-cp -r \
-  ./plugins/vim-fugitive/doc \
-  ./plugins/vim-fugitive/plugin \
-  $BUNDLE_PATH/vim-fugitive/
+cd ./plugins/vim-fugitive && git archive master | tar -x -C $BUNDLE_PATH/vim-fugitive
+cd ../../
 
 
 # Install ctrlp
 mkdir $BUNDLE_PATH/ctrlp.vim
-cp -r \
-  ./plugins/ctrlp.vim/plugin \
-  ./plugins/ctrlp.vim/autoload \
-  ./plugins/ctrlp.vim/doc \
-  $BUNDLE_PATH/ctrlp.vim/
+cd ./plugins/ctrlp.vim && git archive master | tar -x -C $BUNDLE_PATH/ctrlp.vim
+cd ../../
 
 
 # Install vim-snipmate
-cp -r \
-  ./plugins/tlib_vim \
-  $BUNDLE_PATH/
-cp -r \
-  ./plugins/vim-addon-mw-utils \
-  $BUNDLE_PATH/
-cp -r \
-  ./plugins/vim-snipmate \
-  $BUNDLE_PATH/
-cp -r ./snippets \
-  $BUNDLE_PATH/vim-snipmate/
+cd ./plugins/vim-snipmate && git archive master | tar -x -C $BUNDLE_PATH/vim-snipmate
+cd ../../
 
 
 # Install vim-polyglot
