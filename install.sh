@@ -48,11 +48,6 @@ cd ./plugins/ctrlp.vim && git archive master | tar -x -C $BUNDLE_PATH/ctrlp.vim
 cd ../../
 
 
-# Install vim-snipmate
-cd ./plugins/vim-snipmate && git archive master | tar -x -C $BUNDLE_PATH/vim-snipmate
-cd ../../
-
-
 # Install vim-polyglot
 mkdir $BUNDLE_PATH/vim-polyglot
 cd ./plugins/vim-polyglot && git archive master | tar -x -C $BUNDLE_PATH/vim-polyglot

@@ -31,7 +31,7 @@ set splitbelow
 " Highlight current line
 set cursorline
 
-" Ingore case when autocompleting a path
+" Ignore case when autocompleting a path
 set wildignorecase
 
 " vim-airline: customizations
@@ -55,3 +55,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': ['<c-t>'],
   \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
   \ }
+
+highlight Comment gui=italic cterm=italic
+highlight htmlArg gui=italic cterm=italic
+highlight Type gui=italic cterm=italic
