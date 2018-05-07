@@ -106,3 +106,8 @@ echo 'Fonts at ./extra/powerline-fonts'
 echo ''
 echo 'Install the_silver_searcher to improve ctrlp search:'
 echo '  brew install the_silver_searcher'
+
+echo ''
+echo 'Install italics in Vim:'
+echo ' - `tic ./extra/xterm-256color-italic.terminfo`'
+echo ' - add "export TERM=xterm-256color-italic" to .profile'
