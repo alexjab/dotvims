@@ -59,3 +59,7 @@ let g:ctrlp_prompt_mappings = {
 highlight Comment gui=italic cterm=italic
 highlight htmlArg gui=italic cterm=italic
 highlight Type gui=italic cterm=italic
+
+set foldmethod=indent
+set foldnestmax=1
+set foldlevel=0
