@@ -63,3 +63,9 @@ highlight Type gui=italic cterm=italic
 set foldmethod=indent
 set foldnestmax=1
 set foldlevel=0
+
+" For vim-easyclip
+" Enable global clipboard
+set clipboard=unnamed
+" Remap m (set mark) to lm (m is used to cut lines)
+nnoremap lm m

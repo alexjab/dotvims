@@ -53,6 +53,13 @@ mkdir $BUNDLE_PATH/vim-polyglot
 cd ./plugins/vim-polyglot && git archive master | tar -x -C $BUNDLE_PATH/vim-polyglot
 cd ../../
 
+# Install vim-easyclip
+mkdir $BUNDLE_PATH/vim-easyclip
+mkdir $BUNDLE_PATH/vim-repeat
+cd ./plugins/vim-easyclip && git archive master | tar -x -C $BUNDLE_PATH/vim-easyclip
+cd ../vim-repeat && git archive master | tar -x -C $BUNDLE_PATH/vim-repeat
+cd ../../
+
 # Create .vimrc file
 # Pathogen
 echo -n '-> Adding pathogen to ~/.vimrc ... '
@@ -87,6 +94,8 @@ vim \
   -c "helptags $BUNDLE_PATH/vim-airline/doc" \
   -c "helptags $BUNDLE_PATH/vim-fugitive/doc" \
   -c "helptags $BUNDLE_PATH/ctrlp.vim/doc" \
+  -c "helptags $BUNDLE_PATH/vim-polyglot/doc" \
+  -c "helptags $BUNDLE_PATH/vim-easyclip/doc" \
   -c 'q'
 
 echo 'Done.'
