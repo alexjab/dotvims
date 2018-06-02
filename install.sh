@@ -60,6 +60,11 @@ cd ./plugins/vim-easyclip && git archive master | tar -x -C $BUNDLE_PATH/vim-eas
 cd ../vim-repeat && git archive master | tar -x -C $BUNDLE_PATH/vim-repeat
 cd ../../
 
+# Install vim-prettier
+mkdir $BUNDLE_PATH/vim-prettier
+cd ./plugins/vim-prettier && git archive master | tar -x -C $BUNDLE_PATH/vim-prettier
+cd ../../
+
 # Create .vimrc file
 # Pathogen
 echo -n '-> Adding pathogen to ~/.vimrc ... '
