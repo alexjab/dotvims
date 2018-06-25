@@ -70,6 +70,8 @@ set clipboard=unnamed
 let g:EasyClipAlwaysMoveCursorToEndOfPaste=1
 " Disables d => delete
 let g:EasyClipEnableBlackHoleRedirect=0
+" Disables m => move (restores m => set mark)
+let g:EasyClipUseCutDefaults = 0
 " Enables _d => cut
 nnoremap _d "_d
 nnoremap _D "_D
