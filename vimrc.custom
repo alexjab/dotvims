@@ -67,5 +67,10 @@ set foldlevel=0
 " For vim-easyclip
 " Enable global clipboard
 set clipboard=unnamed
-" Remap m (set mark) to lm (m is used to cut lines)
-nnoremap lm m
+let g:EasyClipAlwaysMoveCursorToEndOfPaste=1
+" Disables d => delete
+let g:EasyClipEnableBlackHoleRedirect=0
+" Enables _d => cut
+nnoremap _d "_d
+nnoremap _D "_D
+vnoremap _d "_d
