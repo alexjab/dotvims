@@ -41,5 +41,5 @@
 	path = plugins/vim-prettier
 	url = https://github.com/prettier/vim-prettier
 [submodule "plugins/--force"]
-	path = plugins/--force
+	path = plugins/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git

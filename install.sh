@@ -65,6 +65,11 @@ mkdir $BUNDLE_PATH/vim-prettier
 cd ./plugins/vim-prettier && git archive master | tar -x -C $BUNDLE_PATH/vim-prettier
 cd ../../
 
+# Install nerdcommenter
+mkdir $BUNDLE_PATH/nerdcommenter
+cd ./plugins/nerdcommenter && git archive master | tar -x -C $BUNDLE_PATH/nerdcommenter
+cd ../../
+
 # Create .vimrc file
 # Pathogen
 echo -n '-> Adding pathogen to ~/.vimrc ... '
