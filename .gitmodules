@@ -38,5 +38,8 @@
 	path = plugins/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
 [submodule "vim-prettier"]
-	path = vim-prettier
+	path = plugins/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "plugins/--force"]
+	path = plugins/--force
+	url = git@github.com:scrooloose/nerdcommenter.git
