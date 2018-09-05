@@ -70,6 +70,11 @@ mkdir $BUNDLE_PATH/nerdcommenter
 cd ./plugins/nerdcommenter && git archive master | tar -x -C $BUNDLE_PATH/nerdcommenter
 cd ../../
 
+# Install matchit.vim
+mkdir $BUNDLE_PATH/matchit
+cd ./plugins/matchit && git archive master | tar -x -C $BUNDLE_PATH/matchit
+cd ../../
+
 # Create .vimrc file
 # Pathogen
 echo -n '-> Adding pathogen to ~/.vimrc ... '
