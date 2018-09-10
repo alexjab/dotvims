@@ -9,7 +9,7 @@ echo 'Installing...'
 if [ -f $VIMRC_PATH ]; then
   mv $VIMRC_PATH ~/.vimrc.`date +%Y%m%d_%s`
 fi
-if [ -d $VIM_PATH ]; then:q
+if [ -d $VIM_PATH ]; then
 
   mv $VIM_PATH ~/.vim.`date +%Y%m%d_%s`
 fi

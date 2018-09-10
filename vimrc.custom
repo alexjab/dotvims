@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" => VIM UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on
@@ -50,6 +50,38 @@ set noshowmode
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" Highlights the current line
+set cursorline
+
+" Remove extra margin to the left
+set foldcolumn=0
+
+" Enable mouse scrolling
+set mouse=a
+
+" Show the line numbers
+set number
+
+" Height of the command bar
+set cmdheight=1
+
+" Tabs/spaces
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Open split on the right and bottom
+set splitright
+set splitbelow
+
+" Ignore case when autocompleting a path
+set wildignorecase
+
+" Folding
+set foldmethod=indent
+set foldnestmax=1
+set foldlevel=0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -67,7 +99,13 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set termguicolors         " Force GUI colors in terminals
+" Force GUI colors in terminals
+set termguicolors
+
+" Code UI tweaks
+highlight Comment gui=italic cterm=italic
+highlight htmlArg gui=italic cterm=italic
+highlight Type gui=italic cterm=italic
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,43 +129,31 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom changes
+" => Plugins config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove extra margin to the left
-set foldcolumn=0
 
-" Enable mouse scrolling
-set mouse=a
-
-" Show the line numbers
-set number
-
-" Height of the command bar
-set cmdheight=1
-
-" Tabs/spaces
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
-
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unset status line (will be set by vim-airline)
 set statusline=
-
-" Open split on the right and bottom
-set splitright
-set splitbelow
-
-" Highlight current line
-
-" Ignore case when autocompleting a path
-set wildignorecase
 
 " vim-airline: customizations
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dracula'
+
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ctrlp
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ctrlp: use The Silver Searcher instead of find if available
 if executable('ag')
@@ -147,15 +173,11 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
   \ }
 
-highlight Comment gui=italic cterm=italic
-highlight htmlArg gui=italic cterm=italic
-highlight Type gui=italic cterm=italic
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM Easyclip
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set foldmethod=indent
-set foldnestmax=1
-set foldlevel=0
-
-" For vim-easyclip
 " Enable global clipboard
 set clipboard=unnamed
 let g:EasyClipAlwaysMoveCursorToEndOfPaste=1
@@ -167,6 +189,11 @@ let g:EasyClipUseCutDefaults = 0
 nnoremap _d "_d
 nnoremap _D "_D
 vnoremap _d "_d
+
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
