@@ -2,14 +2,11 @@
 " => VIM UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Sets the number of lines to see above and below the cursor
+set scrolloff=10
+
 filetype plugin on
 filetype indent on
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-
-set so=7
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
@@ -21,17 +18,14 @@ source $VIMRUNTIME/menu.vim
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " Ignore case when searching
 set ignorecase
-
 " When searching try to be smart about cases 
 set smartcase
-
 " Highlight search results
 set hlsearch
-
 " Makes search act like search in modern browsers
 set incsearch 
 
@@ -62,9 +56,6 @@ set mouse=a
 " Show the line numbers
 set number
 
-" Height of the command bar
-set cmdheight=1
-
 " Open split on the right and bottom
 set splitright
 set splitbelow
@@ -81,7 +72,17 @@ set foldlevel=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Sets the swap directory to avoid the current folder
 set directory^=$HOME/.vim/swap
+
+" Improve tabnew Tab UX
+set wildmode=longest:full,full
+set wildmenu
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
