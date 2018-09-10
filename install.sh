@@ -17,6 +17,7 @@ fi
 
 # Create basic files and folders
 mkdir -p $PLUGINS_PATH
+mkdir $VIM_PATH/swap
 touch $VIMRC_PATH
 
 
