@@ -1,5 +1,5 @@
 VIM_PATH=~/.vim
-BUNDLE_PATH=$VIM_PATH/bundle
+PLUGINS_PATH=$VIM_PATH/pack/plugins/start
 VIMRC_PATH=~/.vimrc
 
 echo 'Installing...'
@@ -19,101 +19,82 @@ mkdir $VIM_PATH
 touch $VIMRC_PATH
 
 
-# Install pathogen
-mkdir $VIM_PATH/autoload $BUNDLE_PATH
-cp ./plugins/vim-pathogen/autoload/pathogen.vim $VIM_PATH/autoload/
-
-
 # Install dracula-vim
-mkdir $BUNDLE_PATH/dracula-vim
-cd ./plugins/dracula-vim && git archive master | tar -x -C $BUNDLE_PATH/dracula-vim
+mkdir $PLUGINS_PATH/dracula-vim
+cd ./plugins/dracula-vim && git archive master | tar -x -C $PLUGINS_PATH/dracula-vim
 cd ../../
 
 
 # Install vim-airline
-mkdir $BUNDLE_PATH/vim-airline
-cd ./plugins/vim-airline && git archive master | tar -x -C $BUNDLE_PATH/vim-airline
+mkdir $PLUGINS_PATH/vim-airline
+cd ./plugins/vim-airline && git archive master | tar -x -C $PLUGINS_PATH/vim-airline
 cd ../../
 
 
 # Install vim-fugitive
-mkdir $BUNDLE_PATH/vim-fugitive
-cd ./plugins/vim-fugitive && git archive master | tar -x -C $BUNDLE_PATH/vim-fugitive
+mkdir $PLUGINS_PATH/vim-fugitive
+cd ./plugins/vim-fugitive && git archive master | tar -x -C $PLUGINS_PATH/vim-fugitive
 cd ../../
 
 
 # Install ctrlp
-mkdir $BUNDLE_PATH/ctrlp.vim
-cd ./plugins/ctrlp.vim && git archive master | tar -x -C $BUNDLE_PATH/ctrlp.vim
+mkdir $PLUGINS_PATH/ctrlp.vim
+cd ./plugins/ctrlp.vim && git archive master | tar -x -C $PLUGINS_PATH/ctrlp.vim
 cd ../../
 
 
 # Install vim-polyglot
-mkdir $BUNDLE_PATH/vim-polyglot
-cd ./plugins/vim-polyglot && git archive master | tar -x -C $BUNDLE_PATH/vim-polyglot
+mkdir $PLUGINS_PATH/vim-polyglot
+cd ./plugins/vim-polyglot && git archive master | tar -x -C $PLUGINS_PATH/vim-polyglot
 cd ../../
 
 # Install vim-easyclip
-mkdir $BUNDLE_PATH/vim-easyclip
-mkdir $BUNDLE_PATH/vim-repeat
-cd ./plugins/vim-easyclip && git archive master | tar -x -C $BUNDLE_PATH/vim-easyclip
-cd ../vim-repeat && git archive master | tar -x -C $BUNDLE_PATH/vim-repeat
+mkdir $PLUGINS_PATH/vim-easyclip
+mkdir $PLUGINS_PATH/vim-repeat
+cd ./plugins/vim-easyclip && git archive master | tar -x -C $PLUGINS_PATH/vim-easyclip
+cd ../vim-repeat && git archive master | tar -x -C $PLUGINS_PATH/vim-repeat
 cd ../../
 
 # Install vim-prettier
-mkdir $BUNDLE_PATH/vim-prettier
-cd ./plugins/vim-prettier && git archive master | tar -x -C $BUNDLE_PATH/vim-prettier
+mkdir $PLUGINS_PATH/vim-prettier
+cd ./plugins/vim-prettier && git archive master | tar -x -C $PLUGINS_PATH/vim-prettier
 cd ../../
 
 # Install nerdcommenter
-mkdir $BUNDLE_PATH/nerdcommenter
-cd ./plugins/nerdcommenter && git archive master | tar -x -C $BUNDLE_PATH/nerdcommenter
+mkdir $PLUGINS_PATH/nerdcommenter
+cd ./plugins/nerdcommenter && git archive master | tar -x -C $PLUGINS_PATH/nerdcommenter
 cd ../../
 
 # Install matchit.vim
-mkdir $BUNDLE_PATH/matchit
-cd ./plugins/matchit && git archive master | tar -x -C $BUNDLE_PATH/matchit
+mkdir $PLUGINS_PATH/matchit
+cd ./plugins/matchit && git archive master | tar -x -C $PLUGINS_PATH/matchit
 cd ../../
 
-# Create .vimrc file
-# Pathogen
-echo -n '-> Adding pathogen to ~/.vimrc ... '
 
-echo 'execute pathogen#infect()' > $VIMRC_PATH
-echo '' >> $VIMRC_PATH
+# Use custom vimrc
+echo -n '-> Using custom vimrc as ~/.vimrc ... '
 
-echo 'Done.'
-
-
-# Add basic vimrc
-echo -n '-> Adding basic vimrc to ~/.vimrc ... '
-
-cat ./vimrc/vimrcs/basic.vim >> $VIMRC_PATH
-echo '' >> $VIMRC_PATH
-
-echo 'Done.'
-
-
-# Add custom vimrc
-echo -n '-> Adding custom vimrc to ~/.vimrc ... '
-
+echo '' > $VIMRC_PATH
 cat vimrc.custom >> $VIMRC_PATH
 
-echo 'Done.'
+echo '-> Done.'
 
 
 # Generate docs
 echo -n '-> Generating docs for plugins ... '
 
 vim \
-  -c "helptags $BUNDLE_PATH/vim-airline/doc" \
-  -c "helptags $BUNDLE_PATH/vim-fugitive/doc" \
-  -c "helptags $BUNDLE_PATH/ctrlp.vim/doc" \
-  -c "helptags $BUNDLE_PATH/vim-polyglot/doc" \
-  -c "helptags $BUNDLE_PATH/vim-easyclip/doc" \
+  -c "helptags $PLUGINS_PATH/vim-airline/doc" \
+  -c "helptags $PLUGINS_PATH/vim-fugitive/doc" \
+  -c "helptags $PLUGINS_PATH/ctrlp.vim/doc" \
+  -c "helptags $PLUGINS_PATH/vim-polyglot/doc" \
+  -c "helptags $PLUGINS_PATH/vim-easyclip/doc" \
+  -c "helptags $PLUGINS_PATH/vim-prettier/doc" \
+  -c "helptags $PLUGINS_PATH/nerdcommenter/doc" \
+  -c "helptags $PLUGINS_PATH/matchit/doc" \
   -c 'q'
 
-echo 'Done.'
+echo '-> Done.'
 
 
 # All done

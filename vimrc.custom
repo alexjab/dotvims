@@ -1,4 +1,94 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+filetype plugin on
+filetype indent on
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+set so=7
+
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en' 
+set langmenu=en
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+"Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=2
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch 
+
+" Don't show mode in the command line -- using Airline for that
+set noshowmode
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable 
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+set termguicolors         " Force GUI colors in terminals
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Custom changes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove extra margin to the left
@@ -13,9 +103,6 @@ set number
 " Height of the command bar
 set cmdheight=1
 
-" Colors
-colorscheme dracula
-
 " Tabs/spaces
 " 1 tab == 2 spaces
 set shiftwidth=2
@@ -29,7 +116,6 @@ set splitright
 set splitbelow
 
 " Highlight current line
-set cursorline
 
 " Ignore case when autocompleting a path
 set wildignorecase
@@ -37,6 +123,7 @@ set wildignorecase
 " vim-airline: customizations
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='dracula'
 
 " ctrlp: use The Silver Searcher instead of find if available
 if executable('ag')
