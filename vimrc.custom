@@ -54,6 +54,10 @@ set history=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use dracula as color scheme
+colorscheme dracula
+
 " Enable syntax highlighting
 syntax enable 
 

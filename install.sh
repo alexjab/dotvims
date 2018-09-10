@@ -9,13 +9,14 @@ echo 'Installing...'
 if [ -f $VIMRC_PATH ]; then
   mv $VIMRC_PATH ~/.vimrc.`date +%Y%m%d_%s`
 fi
-if [ -d $VIM_PATH ]; then
+if [ -d $VIM_PATH ]; then:q
+
   mv $VIM_PATH ~/.vim.`date +%Y%m%d_%s`
 fi
 
 
 # Create basic files and folders
-mkdir $VIM_PATH
+mkdir -p $PLUGINS_PATH
 touch $VIMRC_PATH
 
 
@@ -28,6 +29,12 @@ cd ../../
 # Install vim-airline
 mkdir $PLUGINS_PATH/vim-airline
 cd ./plugins/vim-airline && git archive master | tar -x -C $PLUGINS_PATH/vim-airline
+cd ../../
+
+
+# Install vim-airline-themes
+mkdir $PLUGINS_PATH/vim-airline-themes
+cd ./plugins/vim-airline-themes && git archive master | tar -x -C $PLUGINS_PATH/vim-airline-themes
 cd ../../
 
 
@@ -74,8 +81,7 @@ cd ../../
 # Use custom vimrc
 echo -n '-> Using custom vimrc as ~/.vimrc ... '
 
-echo '' > $VIMRC_PATH
-cat vimrc.custom >> $VIMRC_PATH
+cat vimrc.custom > $VIMRC_PATH
 
 echo '-> Done.'
 

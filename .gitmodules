@@ -43,3 +43,6 @@
 [submodule "plugins/matchit"]
 	path = plugins/matchit
 	url = git@github.com:tmhedberg/matchit.git
+[submodule "plugins/vim-airline-themes"]
+	path = plugins/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
