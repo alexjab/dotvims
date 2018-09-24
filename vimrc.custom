@@ -203,3 +203,11 @@ let g:NERDCustomDelimiters = {
   \ 'typescript': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' },
   \ 'typescriptreact': { 'left': '//', 'leftAlt': '/**', 'rightAlt': '*/' },
   \}
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-prettier
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enables <Leader>p for Prettier (it should work out of the box but it does not)
+nnoremap <Leader>p :Prettier<CR>
