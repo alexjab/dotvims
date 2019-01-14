@@ -84,6 +84,11 @@ set wildmenu
 " like <leader>w saves the current file
 let mapleader = ","
 
+" Improve undo history support; now you can undo even after closing
+" and reopening VIM.
+set undofile
+set undodir=~/.vim/undodir
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
