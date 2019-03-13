@@ -1,53 +1,53 @@
 [user]
-	name = Alexandre Jablon
-	email = alexandre.jablon@gmail.com
+  name = Alexandre Jablon
+  email = alexandre.jablon@gmail.com
 [core]
-	editor = vim
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = vim
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [web]
-	browser = firefox
+  browser = firefox
 [rerere]
-	enabled = 1
-	autoupdate = 1
+  enabled = 1
+  autoupdate = 1
 [push]
-	default = matching
+  default = matching
 [color]
-	ui = auto
+  ui = auto
 [color "branch"]
-	current = yellow bold
-	local = green bold
-	remote = cyan bold
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 [color "status"]
-	added = green bold
-	changed = yellow bold
-	untracked = red bold
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
 [diff]
-	tool = vimdiff
+  tool = vimdiff
   renames = true
   mnemonicPrefix = true
 [difftool]
-	prompt = false
+  prompt = false
 [github]
-	user = alexjab
+  user = alexjab
 [alias]
-	st = status
-	co = checkout
-	ad = add
-	dif = diff
-	lo = log --oneline --graph --decorate
+  st = status
+  co = checkout
+  ad = add
+  dif = diff
+  lo = log --oneline --graph --decorate
   ln = log --oneline -n30
-	ls = ls-files
-	merg = merge
-	pus = push
-	pul = pull
+  ls = ls-files
+  merg = merge
+  pus = push
+  pul = pull
   unstage = reset HEAD --
   branches = for-each-ref --sort -authordate --count 10 --sort -authordate --format '%(authordate:short) %(color:green bold)%(align:left,50)%(refname:short)%(end)%(color:reset) %(subject)' refs/heads
   upgrade = "!zsh -c 'git fetch origin && git pull origin master --rebase'"
