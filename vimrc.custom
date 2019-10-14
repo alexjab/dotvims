@@ -231,3 +231,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 " Needed to open snippets edition in the right place.
 let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
+
+" Lets vim copy the file instead of overwriting it
+set backupcopy=yes
