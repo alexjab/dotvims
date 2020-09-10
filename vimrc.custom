@@ -234,3 +234,10 @@ let g:UltiSnipsSnippetsDir="~/.vim/ultisnips"
 
 " Lets vim copy the file instead of overwriting it
 set backupcopy=yes
+
+" Remap accented vowels for marks
+nnoremap à 'a
+nnoremap è 'e
+nnoremap ì 'i
+nnoremap ò 'o
+nnoremap ù 'u
