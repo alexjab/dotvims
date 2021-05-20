@@ -51,8 +51,23 @@
   lineNumber = true
 
 [delta]
-  features = side-by-side decorations
+  features = side-by-side decorations colors
   syntax-theme = Dracula
+
+[delta "colors"]
+  plus-style = syntax "#11381b"
+  plus-emph-style = syntax "#206630"
+  minus-style = syntax "#4d1919"
+  minus-emph-style = syntax "#993232"
+
+  line-numbers-minus-style = red
+  line-numbers-plus-style = green
+  line-numbers-zero-style = "#6272a4"
+  line-numbers-right-style = "#44475a"
+  line-numbers-left-style = "#44475a"
+
+  hunk-header-decoration-style = "#44475a" ul ol
+  file-decoration-style = yellow ul ol
 
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
