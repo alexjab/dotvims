@@ -79,11 +79,6 @@ mkdir $PLUGINS_PATH/matchit
 cd ./plugins/matchit && git archive master | tar -x -C $PLUGINS_PATH/matchit
 cd ../../
 
-# Install UltiSnips
-mkdir $PLUGINS_PATH/ultisnips
-cd ./plugins/ultisnips && git archive master | tar -x -C $PLUGINS_PATH/ultisnips
-cd ../../
-
 
 # Use custom vimrc
 echo -n '-> Using custom vimrc as ~/.vimrc ... '
