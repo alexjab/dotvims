@@ -1,2 +1,1 @@
-git pull origin master
-git submodule update --recursive --remote
+vim +PlugUpdate +qall

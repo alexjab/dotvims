@@ -94,9 +94,6 @@ set undodir=~/.vim/undodir
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Use dracula as color scheme
-colorscheme dracula
-
 " Enable syntax highlighting
 syntax enable 
 
@@ -143,6 +140,27 @@ set whichwrap+=<,>,h,l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin()
+
+Plug 'kien/ctrlp.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tmhedberg/matchit'
+Plug 'preservim/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'svermeulen/vim-easyclip'
+Plug 'sheerun/vim-polyglot'
+Plug 'prettier/vim-prettier'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+" This needs to be put AFTER plug#end()
+" https://draculatheme.com/vim
+" Use dracula as color scheme
+colorscheme dracula
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM Airline

@@ -1,5 +1,4 @@
 VIM_PATH=~/.vim
-PLUGINS_PATH=$VIM_PATH/pack/plugins/start
 VIMRC_PATH=~/.vimrc
 
 echo 'Installing...'
@@ -16,91 +15,39 @@ fi
 
 
 # Create basic files and folders
-mkdir -p $PLUGINS_PATH
 mkdir $VIM_PATH/swap
 mkdir $VIM_PATH/undodir
 touch $VIMRC_PATH
 
 
-# Install dracula-vim
-mkdir $PLUGINS_PATH/dracula-vim
-cd ./plugins/dracula-vim && git archive master | tar -x -C $PLUGINS_PATH/dracula-vim
-cd ../../
-
-
-# Install vim-airline
-mkdir $PLUGINS_PATH/vim-airline
-cd ./plugins/vim-airline && git archive master | tar -x -C $PLUGINS_PATH/vim-airline
-cd ../../
-
-
-# Install vim-airline-themes
-mkdir $PLUGINS_PATH/vim-airline-themes
-cd ./plugins/vim-airline-themes && git archive master | tar -x -C $PLUGINS_PATH/vim-airline-themes
-cd ../../
-
-
-# Install vim-fugitive
-mkdir $PLUGINS_PATH/vim-fugitive
-cd ./plugins/vim-fugitive && git archive master | tar -x -C $PLUGINS_PATH/vim-fugitive
-cd ../../
-
-
-# Install ctrlp
-mkdir $PLUGINS_PATH/ctrlp.vim
-cd ./plugins/ctrlp.vim && git archive master | tar -x -C $PLUGINS_PATH/ctrlp.vim
-cd ../../
-
-
-# Install vim-polyglot
-mkdir $PLUGINS_PATH/vim-polyglot
-cd ./plugins/vim-polyglot && git archive master | tar -x -C $PLUGINS_PATH/vim-polyglot
-cd ../../
-
-# Install vim-easyclip
-mkdir $PLUGINS_PATH/vim-easyclip
-mkdir $PLUGINS_PATH/vim-repeat
-cd ./plugins/vim-easyclip && git archive master | tar -x -C $PLUGINS_PATH/vim-easyclip
-cd ../vim-repeat && git archive master | tar -x -C $PLUGINS_PATH/vim-repeat
-cd ../../
-
-# Install vim-prettier
-mkdir $PLUGINS_PATH/vim-prettier
-cd ./plugins/vim-prettier && git archive master | tar -x -C $PLUGINS_PATH/vim-prettier
-cd ../../
-
-# Install nerdcommenter
-mkdir $PLUGINS_PATH/nerdcommenter
-cd ./plugins/nerdcommenter && git archive master | tar -x -C $PLUGINS_PATH/nerdcommenter
-cd ../../
-
-# Install matchit.vim
-mkdir $PLUGINS_PATH/matchit
-cd ./plugins/matchit && git archive master | tar -x -C $PLUGINS_PATH/matchit
-cd ../../
-
-
 # Use custom vimrc
-echo -n '-> Using custom vimrc as ~/.vimrc ... '
+echo -n '-> Using vimrc to install plugins ...'
 
-cat vimrc.custom > $VIMRC_PATH
+cat vimrc_install.custom > $VIMRC_PATH
 
 echo '-> Done.'
 
 
-# Generate docs
-echo -n '-> Generating docs for plugins ... '
+# Install vim-plug
+echo -n '-> Installing vim-plug ...'
 
-vim \
-  -c "helptags $PLUGINS_PATH/vim-airline/doc" \
-  -c "helptags $PLUGINS_PATH/vim-fugitive/doc" \
-  -c "helptags $PLUGINS_PATH/ctrlp.vim/doc" \
-  -c "helptags $PLUGINS_PATH/vim-polyglot/doc" \
-  -c "helptags $PLUGINS_PATH/vim-easyclip/doc" \
-  -c "helptags $PLUGINS_PATH/vim-prettier/doc" \
-  -c "helptags $PLUGINS_PATH/nerdcommenter/doc" \
-  -c "helptags $PLUGINS_PATH/matchit/doc" \
-  -c 'q'
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+echo '-> Done.'
+
+
+# Install plugins
+echo -n '-> Installing plugins ...'
+
+vim +PlugInstall +qall
+
+echo '-> Done.'
+
+
+# Use custom vimrc
+echo -n '-> Using custom vimrc as ~/.vimrc ...'
+
+cat vimrc.custom > $VIMRC_PATH
 
 echo '-> Done.'
 
