@@ -15,8 +15,8 @@ fi
 
 
 # Create basic files and folders
-mkdir $VIM_PATH/swap
-mkdir $VIM_PATH/undodir
+mkdir -p $VIM_PATH/swap
+mkdir -p $VIM_PATH/undodir
 touch $VIMRC_PATH
 
 
