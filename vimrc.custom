@@ -22,8 +22,10 @@ set cmdheight=1
 
 " Ignore case when searching
 set ignorecase
+
 " When searching try to be smart about cases 
 set smartcase
+
 " Highlight search results
 set hlsearch
 " Makes search act like search in modern browsers
@@ -125,9 +127,9 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
-" Linebreak on 500 characters
-set lbr
-set tw=500
+" Linebreak
+set linebreak
+set textwidth=80
 
 set ai "Auto indent
 set si "Smart indent
@@ -146,6 +148,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tmhedberg/matchit'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'svermeulen/vim-easyclip'
