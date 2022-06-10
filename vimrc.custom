@@ -255,3 +255,11 @@ nnoremap è 'e
 nnoremap ì 'i
 nnoremap ò 'o
 nnoremap ù 'u
+
+" Move one or more lines up or down
+nnoremap <S-Down> :m .+1<CR>==
+inoremap <S-Down> <Esc>:m .+1<CR>==gi
+vnoremap <S-Down> :m '>+1<CR>gv=gv
+nnoremap <S-Up> :m .-2<CR>==
+inoremap <S-Up> <Esc>:m .-2<CR>==gi
+vnoremap <S-Up> :m '<-2<CR>gv=gv
