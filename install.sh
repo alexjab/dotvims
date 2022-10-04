@@ -60,7 +60,7 @@ echo '-> All done.'
 # Fonts
 echo ''
 echo 'Extra:'
-echo 'iTerm colors at ./extra/dracula-iterm'
+echo 'iTerm colors at ./extra/OneHalfDark.itermcolors'
 echo 'Fonts at ./extra/powerline-fonts'
 
 echo ''
