@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'tmhedberg/matchit'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'svermeulen/vim-easyclip'
@@ -14,5 +15,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black', { 'branch': 'main' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'wfxr/minimap.vim'
 
 call plug#end()

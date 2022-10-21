@@ -157,6 +157,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'psf/black', { 'branch': 'main' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'wfxr/minimap.vim'
 
 call plug#end()
 
@@ -253,3 +254,6 @@ nnoremap è 'e
 nnoremap ì 'i
 nnoremap ò 'o
 nnoremap ù 'u
+
+let g:minimap_auto_start
+let g:minimap_git_colors = 1
