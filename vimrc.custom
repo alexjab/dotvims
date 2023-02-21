@@ -172,12 +172,13 @@ colorscheme onehalfdark
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Unset status line (will be set by lightline.vim)
 set statusline=
+set laststatus=2
 
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'filetype', 'fileencoding' ] ]
