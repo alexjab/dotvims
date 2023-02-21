@@ -40,7 +40,7 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch 
 
-" Don't show mode in the command line -- using Airline for that
+" Don't show mode in the command line -- using Lightline for that
 set noshowmode
 
 " Sets how many lines of history VIM has to remember
@@ -152,8 +152,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tmhedberg/matchit'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier'
@@ -169,15 +168,28 @@ colorscheme onehalfdark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM Airline
+" => lightline.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Unset status line (will be set by vim-airline)
+" Unset status line (will be set by lightline.vim)
 set statusline=
 
-" vim-airline: customizations
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='onehalfdark'
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'filetype', 'fileencoding' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+" Colors from https://github.com/itchyny/lightline.vim/blob/master/autoload/lightline/colorscheme/one.vim
+let s:palette.tabline.tabsel = [ [ '#3e4452', '#98c379', 240, 76, 'bold' ] ]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctrlp
@@ -252,6 +264,6 @@ nnoremap ì 'i
 nnoremap ò 'o
 nnoremap ù 'u
 
-let g:minimap_auto_start
+let g:minimap_auto_start = 1
 let g:minimap_git_colors = 1
 let g:minimap_width = 20
