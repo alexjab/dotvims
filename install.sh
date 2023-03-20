@@ -52,6 +52,14 @@ cat vimrc.custom > $VIMRC_PATH
 echo '-> Done.'
 
 
+
+# Change OneHalfDark color for comments to something more legible
+echo -n '-> Changing OneHalfDark color for comments to something lighter ...'
+
+sed -i.bak 's/#5c6370/#818998/' ~/.vim/plugged/onehalf/vim/colors/onehalfdark.vim
+
+echo '-> Done.'
+
 # All done
 echo ''
 echo '-> All done.'
@@ -71,3 +79,4 @@ echo ''
 echo 'Install italics in Vim:'
 echo ' - `tic ./extra/xterm-256color-italic.terminfo`'
 echo ' - add "export TERM=xterm-256color-italic" to .profile'
+
