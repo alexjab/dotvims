@@ -149,13 +149,11 @@ set whichwrap+=<,>,h,l
 call plug#begin()
 
 Plug 'kien/ctrlp.vim'
-Plug 'tmhedberg/matchit'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
 Plug 'alexjab/vim-prettier'
-Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 

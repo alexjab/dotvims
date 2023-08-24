@@ -48,6 +48,8 @@
   unstage = reset HEAD --
   branches = for-each-ref --sort -authordate --count 10 --sort -authordate --format '%(authordate:short) %(color:green bold)%(align:left,50)%(refname:short)%(end)%(color:reset) %(subject)' refs/heads
   upgrade = "!zsh -c 'git fetch origin && git pull origin master --rebase'"
+  na = notes add
+  nr = notes remove
 [grep]
   extendedRegexp = true
   lineNumber = true
