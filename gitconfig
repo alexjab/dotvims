@@ -11,8 +11,6 @@
 [rerere]
   enabled = 1
   autoupdate = 1
-[pull]
-  rebase = false
 [push]
   default = matching
 [color]
@@ -34,7 +32,8 @@
 [github]
   user = alexjab
 [alias]
-  diffs = ! git diff | delta --side-by-side --features 'basics decorations colors'
+  diffs = ! git diff $* | delta --side-by-side --features 'basics decorations colors'
+  shows = ! git show $* | delta --side-by-side --features 'basics decorations colors'
   st = status
   co = checkout
   ad = add
@@ -50,6 +49,7 @@
   upgrade = "!zsh -c 'git fetch origin && git pull origin master --rebase'"
   na = notes add
   nr = notes remove
+
 [grep]
   extendedRegexp = true
   lineNumber = true
@@ -80,3 +80,5 @@
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   hunk-header-decoration-style = cyan box ul
+[pull]
+	rebase = false
