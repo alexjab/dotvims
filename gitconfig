@@ -38,9 +38,9 @@
   co = checkout
   ad = add
   dif = diff
-  lo = log --oneline --graph --decorate
-  ln = log --oneline -n30
-  ls = ls-files
+  logg = log --oneline --graph --decorate
+  logl = log --oneline
+  logr = ! git log "$1^.." --oneline --reverse
   merg = merge
   pus = push
   pul = pull
