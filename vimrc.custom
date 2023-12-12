@@ -98,6 +98,9 @@ set undodir=~/.vim/undodir
 
 " Enable syntax highlighting
 syntax enable 
+" Need the new regexp engine
+" https://jameschambers.co.uk/vim-typescript-slow
+set re=0
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
