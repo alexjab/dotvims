@@ -151,7 +151,7 @@ set whichwrap+=<,>,h,l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
@@ -212,6 +212,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': ['<c-t>'],
   \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
   \ }
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM Easyclip

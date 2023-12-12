@@ -2,7 +2,7 @@
 
 call plug#begin()
 
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
