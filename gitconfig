@@ -49,6 +49,8 @@
   upgrade = "!zsh -c 'git fetch origin && git pull origin master --rebase'"
   na = notes add
   nr = notes remove
+  np = push origin 'refs/notes/*'
+  nf = fetch origin 'refs/notes/*:refs/notes/*'
 
 [grep]
   extendedRegexp = true
