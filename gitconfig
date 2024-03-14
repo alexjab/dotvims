@@ -32,8 +32,6 @@
 [github]
   user = alexjab
 [alias]
-  diffs = ! git diff $* | delta --side-by-side --features 'basics decorations colors'
-  shows = ! git show $* | delta --side-by-side --features 'basics decorations colors'
   st = status
   co = checkout
   ad = add
@@ -51,19 +49,20 @@
   nr = notes remove
   np = push origin 'refs/notes/*'
   nf = fetch origin 'refs/notes/*:refs/notes/*'
-
 [grep]
   extendedRegexp = true
   lineNumber = true
+[pull]
+	rebase = false
 
 [delta]
   features = basics decorations colors
-
 [delta "basics"]
   line-numbers = true
-  syntax-theme = Dracula
-
+  side-by-side = true
 [delta "colors"]
+  syntax-theme = OneHalfDark
+
   plus-style = syntax "#11381b"
   plus-emph-style = syntax "#206630"
   minus-style = syntax "#4d1919"
@@ -77,10 +76,7 @@
 
   hunk-header-decoration-style = "#44475a" ul ol
   file-decoration-style = yellow ul ol
-
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   hunk-header-decoration-style = cyan box ul
-[pull]
-	rebase = false
