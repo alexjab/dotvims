@@ -158,12 +158,12 @@ Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
 Plug 'alexjab/vim-prettier'
 Plug 'tpope/vim-fugitive'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'nordtheme/vim'
 
 call plug#end()
 
 " This needs to be put AFTER plug#end()
-colorscheme onehalfdark
+colorscheme nord
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,7 +174,7 @@ set statusline=
 set laststatus=2
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
@@ -265,7 +265,3 @@ nnoremap è 'e
 nnoremap ì 'i
 nnoremap ò 'o
 nnoremap ù 'u
-
-let g:minimap_auto_start = 1
-let g:minimap_git_colors = 1
-let g:minimap_width = 20

@@ -9,6 +9,6 @@ Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
 Plug 'alexjab/vim-prettier'
 Plug 'tpope/vim-fugitive'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'nordtheme/vim'
 
 call plug#end()
