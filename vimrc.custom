@@ -20,6 +20,9 @@ set ruler
 " Height of the command bar
 set cmdheight=1
 
+" A buffer becomes hidden when it is abandoned
+set hid
+
 " Ignore case when searching
 set ignorecase
 
@@ -42,6 +45,15 @@ set showmatch
 
 " Don't show mode in the command line -- using Lightline for that
 set noshowmode
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -100,7 +112,7 @@ set undodir=~/.vim/undodir
 syntax enable 
 " Need the new regexp engine
 " https://jameschambers.co.uk/vim-typescript-slow
-set re=0
+set regexpengine=0
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -114,11 +126,6 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-
-" Code UI tweaks
-highlight Comment gui=italic cterm=italic
-highlight htmlArg gui=italic cterm=italic
-highlight Type gui=italic cterm=italic
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,6 +153,9 @@ set wrap "Wrap lines
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -156,7 +166,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
-Plug 'alexjab/vim-prettier'
+Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
 Plug 'nordtheme/vim'
 
@@ -164,6 +174,13 @@ call plug#end()
 
 " This needs to be put AFTER plug#end()
 colorscheme nord
+
+set background=dark
+
+" Code UI tweaks
+" https://github.com/nordtheme/nord/issues/94#issue-298965378
+highlight Comment guifg=#6d7a96
+highlight htmlArg gui=italic cterm=italic
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

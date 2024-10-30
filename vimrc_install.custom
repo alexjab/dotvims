@@ -7,7 +7,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'svermeulen/vim-easyclip'
 Plug 'sheerun/vim-polyglot'
-Plug 'alexjab/vim-prettier'
+Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
 Plug 'nordtheme/vim'
 
