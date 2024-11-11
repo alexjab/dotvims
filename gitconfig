@@ -61,7 +61,7 @@
   line-numbers = true
   side-by-side = true
 [delta "colors"]
-  syntax-theme = OneHalfDark
+  syntax-theme = Nord
 
   plus-style = syntax "#11381b"
   plus-emph-style = syntax "#206630"
