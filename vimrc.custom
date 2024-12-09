@@ -169,6 +169,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
 Plug 'nordtheme/vim'
+Plug 'justinmk/vim-sneak'
+
 
 call plug#end()
 
@@ -282,3 +284,6 @@ nnoremap è 'e
 nnoremap ì 'i
 nnoremap ò 'o
 nnoremap ù 'u
+
+" Enable label-mode for vim-sneak
+let g:sneak#label = 1

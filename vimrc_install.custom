@@ -10,5 +10,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
 Plug 'nordtheme/vim'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
