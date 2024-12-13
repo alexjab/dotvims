@@ -287,3 +287,7 @@ nnoremap ù 'u
 
 " Enable label-mode for vim-sneak
 let g:sneak#label = 1
+
+" Open file under cursor in a new tab
+nnoremap gf <C-W>gf
+vnoremap gf <C-W>gf
