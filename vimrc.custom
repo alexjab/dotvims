@@ -65,7 +65,7 @@ set cursorline
 set foldcolumn=0
 
 " Enable mouse scrolling
-set mouse=a
+" set mouse=a
 
 " Show the line numbers
 set number
