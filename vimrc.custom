@@ -170,6 +170,8 @@ Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-fugitive'
 Plug 'nordtheme/vim'
 Plug 'justinmk/vim-sneak'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
 
 
 call plug#end()
