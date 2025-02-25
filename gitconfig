@@ -12,7 +12,8 @@
   enabled = 1
   autoupdate = 1
 [push]
-  default = matching
+  default = simple
+  autoSetupRemote = true
 [color]
   ui = auto
 [color "branch"]
@@ -27,6 +28,8 @@
   tool = vimdiff
   renames = true
   mnemonicPrefix = true
+  algorithm = histogram
+  colorMoved = plain
 [difftool]
   prompt = false
 [github]
@@ -75,8 +78,22 @@
   line-numbers-left-style = "#44475a"
 
   hunk-header-decoration-style = "#44475a" ul ol
-  file-decoration-style = yellow ul ol
 [delta "decorations"]
-  commit-decoration-style = bold yellow box ul
-  file-style = bold yellow ul
-  hunk-header-decoration-style = cyan box ul
+  commit-decoration-style = yellow ol
+  commit-style = yellow
+  file-decoration-style = yellow ol
+  file-style = yellow ul
+
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
+[fetch]
+  all = true
+[help]
+  autocorrect = prompt
+[rebase]
+  autoStash = true
+  updateRefs = true
