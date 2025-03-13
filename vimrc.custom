@@ -156,6 +156,9 @@ set whichwrap+=<,>,h,l
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Disables indent detection
+let g:polyglot_disabled = ['autoindent']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -293,3 +296,6 @@ let g:sneak#label = 1
 " Open file under cursor in a new tab
 nnoremap gf <C-W>gf
 vnoremap gf <C-W>gf
+
+" When yanking, highlights the line for 500ms
+let g:highlightedyank_highlight_duration = 500
